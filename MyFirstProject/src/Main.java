@@ -14,7 +14,7 @@ public class Main {
         //Primitive Data Types
         int age = 20;
         double price = 6;
-        char grade = 'A';
+        char grade = 'C';
         boolean isStudent = true;
         boolean forSale = false;
         //Reference Data Types
