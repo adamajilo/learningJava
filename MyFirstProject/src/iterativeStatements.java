@@ -104,6 +104,11 @@ break;
 
 //print in console
 
+Scanner m1 = new Scanner(System.in);
+
+System.out.println("Please enter an integer");
+n = m1.nextInt();
+
 for (w = n; w>=1; w--) {//for n iteration
 				for (int j = ?; j<=n; j++){// print numbers from ? all tbe way to m
 system.out.print(j + "");
@@ -111,3 +116,4 @@ system.out.print(j + "");
 system.out.print();
 }
 
+m1.close();
