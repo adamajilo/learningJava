@@ -57,3 +57,48 @@ String s = “”;
  p += 1; 
 System.out.print(”s= “+ s)
 } //p == n || s.length > l
+
+int count;
+for (count = 1; count <= 5; count = count + 1) {
+	system.out.println("count = " + count);
+}
+
+int b = 1
+for (; b<= 5; b++)
+		System.out.println("b = " + b);
+
+
+for (int j = 5; j>0; j--) {
+	system.out.print("j = " + j);
+}
+
+//System.out.println("j = " + j);
+
+		for (int j = 1; j <= 3; j++) {
+								for (int k1 = 1; k1 <= 3; k1++) {
+									if 
+
+
+for (int j=1; j<=5;j++) {
+if (j==3) 
+break; //finish the current loop
+System.out.print("j =" + j
+
+
+for (int j=1; j<=3;j++) {
+					for (int k1=1;k<=3; k1++){
+system.out.println()
+break;
+}
+}
+
+double pointer = 580.0;
+int counter = 0
+while (pointer>0.5) {
+
+system.out.print();
+if (counter >= 10)
+
+break;
+}
+
