@@ -1,6 +1,9 @@
+
 import java.util.Scanner;
 
 public class iterativeStatements {
+
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         // While loop
         int y = 0;
@@ -10,19 +13,22 @@ public class iterativeStatements {
         }
         // While loop without curly brackets
         int i = 0;
-        while (i <= 5)
+        while (i <= 5) {
             System.out.println("i = " + (i += 1));
+        }
         // While loop can be written without curly brackets
         // 6 iterations
         // Post-increment
         int j = 0;
-        while (j++ <= 5)
+        while (j++ <= 5) {
             System.out.print(j + " ");
+        }
         // Compares j value with 5, then increases
         // Pre-increment
         int k = 0;
-        while (++k <= 5)
+        while (++k <= 5) {
             System.out.print(k + " ");
+        }
         // There is an alternative version of the whole statement
         // and we call it a do-while loop.
         // It has the following format.
@@ -46,7 +52,7 @@ public class iterativeStatements {
             fac = fac * n;
         } // fac *= n;
         System.out.println(
-            "The smallest integer whose factorial is greater than 1,000,000 is " + n
+                "The smallest integer whose factorial is greater than 1,000,000 is " + n
         );
         // Variable assignment
         int n1, l;
@@ -67,8 +73,9 @@ public class iterativeStatements {
         }
         // For loop with initialization outside
         int b = 1;
-        for (; b <= 5; b++)
+        for (; b <= 5; b++) {
             System.out.println("b = " + b);
+        }
         // Counting backwards
         for (int j1 = 5; j1 > 0; j1--) {
             System.out.print("j = " + j1);
@@ -78,16 +85,17 @@ public class iterativeStatements {
         // Nested for loop
         for (int j2 = 1; j2 <= 3; j2++) {
             for (int k1 = 1; k1 <= 3; k1++) {
-                if (/* condition */) {
-                    // statement
+                if (j2 == k1) {
+                    System.out.println("j2 = " + j2 + ", k1 = " + k1);
                 }
             }
         }
         // Break
         for (int j3 = 1; j3 <= 5; j3++) {
-            if (j3 == 3)
+            if (j3 == 3) {
                 break; // finish the current loop
-            System.out.print("j = " + j3);
+
+                        }System.out.print("j = " + j3);
         }
         // Break in a nested loop
         for (int j4 = 1; j4 <= 3; j4++) {
@@ -101,8 +109,9 @@ public class iterativeStatements {
         int counter = 0;
         while (pointer > 0.5) {
             System.out.print(pointer);
-            if (counter >= 10)
+            if (counter >= 10) {
                 break;
+            }
             counter++;
             pointer /= 2;
         }
