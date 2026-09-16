@@ -23,6 +23,9 @@ public static void main(String[] args) {
     message();
 }
 
+message(20);
+
+
 
 
 
