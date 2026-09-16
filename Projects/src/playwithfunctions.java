@@ -19,8 +19,9 @@ int b = 0;
 //method = block of reusable code that is executed when called ()
 
 System.out.println("Happy Birthday to you!");
-
-
+System.out.println("Happy Birthday there you!");
+System.out.println("You are x years old!");
+System.out.println("Happy Birthday to you!");
 
     }
 }
