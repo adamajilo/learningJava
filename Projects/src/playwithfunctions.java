@@ -16,9 +16,11 @@ int b = 0;
 // same variable used in different blocks can be the same
 
 
+//method = block of reusable code that is executed when called ()
+
+System.out.println("Happy Birthday to you!");
 
 
 
-
-}
+    }
 }
