@@ -1,4 +1,4 @@
-package nugget;
+//package nugget;
 import java.util.Scanner;
 
 public class SumUpDigits {
