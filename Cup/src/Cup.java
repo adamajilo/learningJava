@@ -25,7 +25,7 @@ public class Cup {
 	}
 
 	public String toString() {
-		return "The color is " + color + " and the size is " + size;
+		return "The color is " + color + " and the size is " + size + "oz";
 	}
 
 	public boolean equals(Cup that){
@@ -38,3 +38,4 @@ public class Cup {
 	}
 
 }
+//Chase Griffin, Bishop-Adam Ajilogba, and Abiola Adekola
