@@ -19,12 +19,22 @@ public class Cup {
 	////	Finish the following functions	//// 
 	////////////////////////////////////////////
 	
-	//public Cup(String c, int s)
+	public Cup(String c, int s){
+		color = c;
+		size = s;
+	}
 
-	//public String toString()
+	public String toString() {
+		return "The color is " + color + " and the size is " + size;
+	}
 
-	//public boolean equals(Cup that)
+	public boolean equals(Cup that){
+		boolean output = this.color.equals(that.color) && this.size == that.size;
+		return output;
+	}
 	
-	//public static Cup larger(Cup c1, Cup c2)
+	public static Cup larger(Cup c1, Cup c2){
+		return c1.size>=c2.size ? c1 : c2;
+	}
 
 }
