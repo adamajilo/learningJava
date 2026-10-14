@@ -9,7 +9,13 @@ public class dateClient {
     System.out.println(d1);
 
 
+    Date d2 = new Date(25,12,1)
+    Date d3 = d2.copy();
 
+    System.out.println(d3)
+    System.out.println(d2 == d3);
+    System.out.println(d2.equals(d3));
+    
 
 
 
