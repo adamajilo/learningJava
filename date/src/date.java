@@ -42,6 +42,18 @@ public int getYear() {
     return this.year;
 }
 
+
+//mutators
+public void setDay(int d) {
+    this.day = d
+}
+public void setMonth(int m) {
+    this.month = m
+}
+public void setYear(int y) {
+    this.year = y
+}
+
 public static String date(int day, int month, int year) {
     DecimalFormat twodigit = new DecimalFormaf("00")
 
