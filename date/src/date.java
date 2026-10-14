@@ -17,8 +17,29 @@ private static final DecimalFormat FOUR_DIGIT = new DecimalFormat("0000");
 
 //constructors
 //default constructors
-public Date() {
+public Date() { //always match with class name
+    this.day = DEFAULT_DAY;
+    this.month = DEFAULT_MONTH;
+    this.year = DEFAULT_YEAR;
+}
+//non-default constructors
+public Date(int day, int month, int year) {
+    this.day = day;
+    this.month = month;
+    this.year = year;
+}
 
+//accessors
+public int getDay() {
+    return this.day;
+}
+
+public int getMonth() {
+    return this.month;
+}
+
+public int getYear() {
+    return this.year;
 }
 
 public static String date(int day, int month, int year) {
