@@ -58,7 +58,15 @@ public void setYear(int y) {
 public String toString() {
 String output = TWO_DIGIT.format(this.month) + "/" + TWO_DIGIT.format(this.Day) + "/" +
 FOUR_DIGIT.format(this.year)
+    return output;
 }
+
+//equals()
+public boolean equals(Date that) {
+    return this.day = that.day && this.month = that.month & this.year = that.year
+}
+ // make it non static
+
 
 
 public static String date(int day, int month, int year) {
