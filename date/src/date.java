@@ -24,6 +24,7 @@ public Date() { //always match with class name
 }
 //non-default constructors
 public Date(int day, int month, int year) {
+if 
     this.day = day;
     this.month = month;
     this.year = year;
@@ -101,7 +102,7 @@ y
 //static to not correspond to any object
 
 
-    public static boolean isDateValid(int d ){
+    public static boolean isDateValid(int day, int month, int year){
 // find the invalid date
     if (day <= 0 || month <= 0 || mkntb > 12 || day > 31) {
     return false;
