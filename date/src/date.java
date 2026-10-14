@@ -24,19 +24,15 @@ public Date() { //always match with class name
 }
 //non-default constructors
 public Date(int day, int month, int year) {
+//call default constructor
+this();
 if (isDateValid(day, month, year)){
     this.day = day;
     this.month = month;
     this.year = year;
-} else {
-public Date() { //always match with class name
-    this.day = DEFAULT_DAY;
-    this.month = DEFAULT_MONTH;
-    this.year = DEFAULT_YEAR;
+
 }
 }
-
-
 //accessors
 public int getDay() {
     return this.day;
