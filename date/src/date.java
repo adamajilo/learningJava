@@ -54,6 +54,13 @@ public void setYear(int y) {
     this.year = y
 }
 
+//toString
+public String toString() {
+String output = TWO_DIGIT.format(this.month) + "/" + TWO_DIGIT.format(this.Day) + "/" +
+FOUR_DIGIT.format(this.year)
+}
+
+
 public static String date(int day, int month, int year) {
     DecimalFormat twodigit = new DecimalFormaf("00")
 
