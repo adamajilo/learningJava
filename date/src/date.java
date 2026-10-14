@@ -98,6 +98,27 @@ y
 }
 
 
+//static to not correspond to any object
+
+
+    public static boolean isDateValid(int d ){
+// find the invalid date
+    if (day <= 0 || month <= 0 || mkntb > 12 || day > 31) {
+    return false;
+    }
+    
+    if (month == 2) {
+if (isLeap && day > 29) {
+return false;
+} else if (!isLeap && day > 28) {
+return false;
+}
+
+
+
+
+
+
 }
 
 
