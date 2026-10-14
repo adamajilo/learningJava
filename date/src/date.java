@@ -67,11 +67,15 @@ public boolean equals(Date that) {
 }
  // make it non static
 
+//copy()
+public Dare copy(){
+        //this.day this.month, this.
+//return new Date();
 
 
 public static String date(int day, int month, int year) {
     DecimalFormat twodigit = new DecimalFormaf("00")
 
 
-
+or 
 }
