@@ -1,93 +1,73 @@
+// Abiola Adekola / Chase Griffin / Bishop-Adam Ajilogba
+
 public class Fractional {
+    
     // Constants
     public static final int DEFAULT_NUMERATOR = 1;
     public static final int DEFAULT_DENOMINATOR = 1;
-
+    
     // Attributes
     private int numerator;
-    private int denominator;
-
-    /**
-     * Default constructor: initializes a Fractional object with default values.
-     */
+    private int denominator; 
+    
+    // Constructors
+    // Default constructor
     public Fractional() {
         this.numerator = DEFAULT_NUMERATOR;
         this.denominator = DEFAULT_DENOMINATOR;
     }
-
-    /**
-     * Non-default constructor: initializes a Fractional object with customized numerator and denominator.
-     * If d equals 0, uses DEFAULT_DENOMINATOR (1).
-     */
+    
+    // Non-default constructor
     public Fractional(int n, int d) {
         this.numerator = n;
-        if (d == 0) {
-            this.denominator = DEFAULT_DENOMINATOR;
-        } else {
-            this.denominator = d;
-        }
+        this.denominator = (d == 0) ? DEFAULT_DENOMINATOR : d;
     }
-
+    
     // Accessors
     public int getNumerator() {
-        return numerator;
+        return this.numerator;
     }
-
+    
     public int getDenominator() {
-        return denominator;
+        return this.denominator;
     }
-
+    
     // Mutators
     public void setNumerator(int n) {
         this.numerator = n;
     }
-
+    
     public void setDenominator(int d) {
         if (d != 0) {
             this.denominator = d;
         }
     }
-
-    /**
-     * Returns a String representation of the Fractional object in the format: "numerator / denominator"
-     */
+    
+    // toString
     public String toString() {
-        return numerator + " / " + denominator;
+        return this.numerator + " / " + this.denominator;
     }
-
-    /**
-     * Returns true if and only if this Fractional object and 'that' Fractional object have the same value.
-     * Compares values using cross-multiplication (a/b == c/d if a*d == c*b) to avoid floating-point precision issues.
-     */
+    
+    // Equals
     public boolean equals(Fractional that) {
         if (that == null) {
             return false;
         }
-        // Using cross multiplication: (this.numerator / this.denominator) == (that.numerator / that.denominator)
-        // is equivalent to: this.numerator * that.denominator == that.numerator * this.denominator
         return (long) this.numerator * that.denominator == (long) that.numerator * this.denominator;
     }
 
-    /**
-     * Compares this Fractional object with 'that' Fractional object.
-     * Returns a positive integer if this > that,
-     * a negative integer if this < that,
-     * and 0 if this == that.
-     */
+    // CompareTo 
     public int compareTo(Fractional that) {
-        // Compare using cross multiplication:
-        // this / this.denom vs that / that.denom
-        // (this.num * that.denom) vs (that.num * this.denom)
-        long thisVal = (long) this.numerator * that.denominator;
-        long thatVal = (long) that.numerator * this.denominator;
-        
-        long diff = thisVal - thatVal;
-        if (diff > 0) {
+        double first = (double) this.numerator / this.denominator;
+        double second = (double) that.numerator / that.denominator;
+
+        if (first > second) {
             return 1;
-        } else if (diff < 0) {
+        } else if (first < second) {
             return -1;
         } else {
             return 0;
         }
     }
+}    }
 }
