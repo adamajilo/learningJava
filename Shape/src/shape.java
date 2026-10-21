@@ -89,15 +89,4 @@ return
 return
 }{
 
-//scanner 
-//String choices: different cases
-switch(expression)
-    //case a, b(thank you for using thjs ap, default(not a value choise)
-switch choice
-case a
-case A
-system out print (please enter a number as the radius kf a circle)
-has.Nextdoubld = false
-while there is no nunber, try again
-please enter a number as tbe radius of the circle
-a or b
+
