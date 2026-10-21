@@ -1,0 +1,29 @@
+package shape;
+
+public class ShapeClient f
+
+
+public static void main (String] args) f
+
+
+
+Shape s1 = new Shape (4.
+Shape s2 = new Shape (5, 6.7);
+
+System. out.println(sl);
+System. out.println(s2);
+System. out.println(sl.area ());
+System.out.printIn(s2.area ());
+}
+//scanner 
+//String choices: different cases
+switch(expression)
+    //case a, b(thank you for using thjs ap, default(not a value choise)
+switch choice
+case a
+case A
+system out print (please enter a number as the radius kf a circle)
+has.Nextdoubld = false
+while there is no nunber, try again
+please enter a number as tbe radius of the circle
+a or b
