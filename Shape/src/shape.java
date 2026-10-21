@@ -75,5 +75,18 @@ if (h >= 0) {
     }else{
         return 
 
+//area
+public double area()
+if (isCircle) {
+return Mathpi
+
+
+//compareTo()
+public int compareTo (shape that){
+if (this are() > that.area()) {
+return 
+}else if{
+return
+}{
 
 
