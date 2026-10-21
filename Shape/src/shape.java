@@ -68,5 +68,12 @@ if (h >= 0) {
     }
 }
 
+//toString
+    public String toString (){
+    if (isCircle){
+        return "circle with radius = " + this.radius;
+    }else{
+        return 
+
 
 
