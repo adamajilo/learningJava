@@ -42,8 +42,7 @@ public class ShapeClient {
 
             case "b":
             case "B":
-                System.0ut_print_correction_if_needed: // (handled below via standard print)
-                System.out.print("Please enter width and height separated by a space: ");
+                System.out.print("Please enter width and height: ");
                 while (!scanner.hasNextDouble()) {
                     System.out.println("Invalid input. Please enter numbers for width and height:");
                     scanner.next();
