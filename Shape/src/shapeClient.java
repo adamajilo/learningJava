@@ -1,4 +1,5 @@
 
+import java.util.Scanner;
 
 public class ShapeClient {
 
@@ -11,19 +12,19 @@ public class ShapeClient {
         System.out.println(s2);
         System.out.println(s1.area());
         System.out.println(s2.area());
-        
 
-        
+        System.out.println("-----------------------------------");
+
         // Scanner & Menu interactive section
         Scanner scanner = new Scanner(System.in);
-        
 
+        System.out.println("Choose shape type:");
         System.out.println("  (a) Circle");
         System.out.println("  (b) Rectangle");
         System.out.print("Enter your choice (a/b): ");
-        
 
-        
+        String choice = scanner.next();
+
         switch (choice) {
             case "a":
             case "A":
@@ -40,20 +41,21 @@ public class ShapeClient {
 
             case "b":
             case "B":
-                System.out.print("Please enter width and height: ");
+                System.out.print("Please enter width: ");
                 while (!scanner.hasNextDouble()) {
-                    System.out.println("Invalid input. Please enter numbers for width and height:");
+                    System.out.println("Invalid input. Please enter a number for the width:");
                     scanner.next();
                 }
                 double w = scanner.nextDouble();
-                
 
+                System.out.print("Please enter height: ");
+                while (!scanner.hasNextDouble()) {
                     System.out.println("Invalid input. Please enter a number for the height:");
                     scanner.next();
                 }
                 double h = scanner.nextDouble();
-                
 
+                Shape userRect = new Shape(w, h);
                 System.out.println("Created: " + userRect);
                 System.out.println("Area: " + userRect.area());
                 break;
