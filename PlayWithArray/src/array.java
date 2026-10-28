@@ -88,7 +88,7 @@ public class Lecture10ArraysNotes {
         // =================================================================
         /*
          * // Arrays have a fixed length. To increase size by 2:
-         * int[] temp_array = new int[arr3.length + 2];
+         * int[] temp_array = new int[arr3.length + 2]; //12 total
          * for (int i = 0; i < arr3.length; i++) {
          *     temp_array[i] = arr3[i];
          * }
