@@ -109,7 +109,7 @@ public class Lecture10ArraysNotes {
      */
     public static int largest(int[] nums) {
         if (nums.length == 0) {
-            return -1;
+            return -1; 
         }
         
         int max = nums[0];
