@@ -15,5 +15,8 @@ public class array {
         System.out.println(arr0[3]);
 
 
+    double[ ] arr2 = mew double [10];
+    System.out.println(arr2);
+
     }
 }
