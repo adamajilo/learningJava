@@ -15,6 +15,7 @@ public class MyVector {
 	}
 
 	// public int[] getVector()
+public int[] getVector() 
 
 	// public String toString()
 
