@@ -104,6 +104,8 @@ public class Lecture10ArraysNotes {
      * 
      * @param nums The array of integers to search.
      * @return The index of the largest number, or -1 if the array is empty.
+        *assume the first element is the largest then compare with others which na ladger if not replace and 
+        restart
      */
     public static int largest(int[] nums) {
         if (nums.length == 0) {
