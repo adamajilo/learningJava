@@ -1,3 +1,4 @@
+//#lecture 9
 public class array {
 
     public static void main(String[] args) {
@@ -17,6 +18,16 @@ public class array {
 
     double[ ] arr2 = mew double [10];
     System.out.println(arr2);
+    System.out.println(arr2[10]);
+
+    int[ ] arr3 = new int [10];
+    for (int i = (); arr3.length; i++) {
+        arr3[i] = i;
+
+}
+
+
+
 
     }
 }
