@@ -8,6 +8,7 @@ public class array {
 
 //length us an attribute
 //0 - (length - 1)
+//address + element location * size
         System.out.println(arr0[0]);
         System.out.println(arr0[1]);
         System.out.println(arr0[2]);
