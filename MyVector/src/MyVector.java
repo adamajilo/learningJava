@@ -35,10 +35,22 @@ return temp_Vector;
   }
 
 	// public MyVector add(MyVector that)
-
+public MyVector add(MyVector that) {
+for(int i = 0; i < hVector.length; i++){
+MyVector hVector = new MyVector()
+hVector[i] = this.Vector[i] + that.Vector[i]
+}
+return hVector
+	}
+}
 	// public int dotProduct(MyVector that)
-	
-	
+	public int dotProduct(MyVector that) {
+for(int i = 0; i < hVector.length; i++){
+MyVector hVector = new MyVector()
+hVector[i] = this.Vector[i] + that.Vector[i]
+}
+return hVector
+	}
 	
 	
 	///////////////////////////////////////////////////////
