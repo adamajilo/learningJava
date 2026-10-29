@@ -15,7 +15,15 @@ public class MyVector {
 	}
 
 	// public int[] getVector()
-public int[] getVector() 
+public int[] getVector() {
+	int temp_Vector = new int[d.length];
+	for (int i = 0; i < temp_Vector; i++) {
+			temp_Vector[i] = d[i];
+			 return temp_Vector;
+}
+
+	
+}
 
 	// public String toString()
 
