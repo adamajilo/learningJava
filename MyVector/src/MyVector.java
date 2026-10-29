@@ -103,6 +103,5 @@ return temp_Vector;
 
 	}
 
-}	}
 
 }
