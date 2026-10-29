@@ -29,9 +29,9 @@ return temp_Vector;
 	String vectorString = <
  
 		for (int i = 0; i < vector; i++){
-				vectorString = vectorString + this.Vector[i] + " ," + " >"
+				vectorString = vectorString + this.Vector[i] + " ,"
  }
-	vectorString = vectorString + this.Vector - 1 + " >"
+	vectorString = vectorString + " >"
   }
 
 	// public MyVector add(MyVector that)
