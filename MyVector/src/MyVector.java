@@ -26,6 +26,12 @@ public int[] getVector() {
 }
 
 	// public String toString()
+  public String toString() {
+		for (){
+
+ }
+	
+  }
 
 	// public MyVector add(MyVector that)
 
