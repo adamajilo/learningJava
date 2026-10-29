@@ -1,4 +1,3 @@
-
 public class MyVector {
 
 	private int[] vector;
@@ -7,7 +6,7 @@ public class MyVector {
 		vector = new int[0];
 	}
 
-	public MyVector(int [] d) {
+	public MyVector(int[] d) {
 		vector = new int[d.length];
 		for (int i = 0; i < d.length; i++) { // deep copy of array d
 			vector[i] = d[i];
@@ -15,43 +14,50 @@ public class MyVector {
 	}
 
 	// public int[] getVector()
-public int[] getVector() {
-	int temp_Vector = new int[vector.length];
-	for (int i = 0; i < temp_Vector; i++) {
+	public int[] getVector() {
+		int[] temp_Vector = new int[vector.length];
+		for (int i = 0; i < vector.length; i++) {
 			temp_Vector[i] = vector[i];
-}
-return temp_Vector;
-	
-}
+		}
+		return temp_Vector;
+	}
 
 	// public String toString()
-  public String toString() {
-	String vectorString = <
- 
-		for (int i = 0; i < vector; i++){
-				vectorString = vectorString + this.Vector[i] + " ,"
- }
-	vectorString = vectorString + " >"
-  }
+	public String toString() {
+		String vectorString = "<";
+		for (int i = 0; i < vector.length; i++) {
+			vectorString += vector[i];
+			if (i < vector.length - 1) {
+				vectorString += ",";
+			}
+		}
+		vectorString += ">";
+		return vectorString;
+	}
 
 	// public MyVector add(MyVector that)
-public MyVector add(MyVector that) {
-for(int i = 0; i < hVector.length; i++){
-MyVector hVector = new MyVector()
-hVector[i] = this.Vector[i] + that.Vector[i]
-}
-return hVector
+	public MyVector add(MyVector that) {
+		if (this.vector.length != that.vector.length) {
+			return new MyVector(); // Returns empty vector if dimensions don't match
+		}
+		int[] result = new int[this.vector.length];
+		for (int i = 0; i < this.vector.length; i++) {
+			result[i] = this.vector[i] + that.vector[i];
+		}
+		return new MyVector(result);
 	}
-}
+
 	// public int dotProduct(MyVector that)
 	public int dotProduct(MyVector that) {
-for(int i = 0; i < hVector.length; i++){
-MyVector hVector = new MyVector()
-hVector[i] = this.Vector[i] + that.Vector[i]
-}
-return hVector
+		if (this.vector.length != that.vector.length || this.vector.length == 0) {
+			return Integer.MIN_VALUE; // Returns Integer.MIN_VALUE if dimensions don't match
+		}
+		int sum = 0;
+		for (int i = 0; i < this.vector.length; i++) {
+			sum += this.vector[i] * that.vector[i];
+		}
+		return sum;
 	}
-	
 	
 	///////////////////////////////////////////////////////
 	// Please don't change anything in the main function //
@@ -92,7 +98,7 @@ return hVector
 		System.out.println();
 		System.out.println("********************************************************");
 		System.out.println();
-		System.out.println("Next, let's test the add method:");
+		System.<noise>println("Next, let's test the add method:");
 
 		System.out.println(v1 + "+" + v2 + " = " + v1.add(v2)); // print <0,0,0>
 		System.out.println(v2 + "+" + v1 + " = " + v2.add(v1)); // print <0,0,0>
@@ -114,6 +120,4 @@ return hVector
 		System.out.println(v4 + "." + v1 + " = " + v4.dotProduct(v1)); // print -2147483648
 
 	}
-
-
-}
+}}
