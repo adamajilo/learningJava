@@ -16,21 +16,22 @@ public class MyVector {
 
 	// public int[] getVector()
 public int[] getVector() {
-	int temp_Vector = new int[d.length];
+	int temp_Vector = new int[vector.length];
 	for (int i = 0; i < temp_Vector; i++) {
-			temp_Vector[i] = d[i];
-			 return temp_Vector;
+			temp_Vector[i] = vector[i];
 }
-
+return temp_Vector;
 	
 }
 
 	// public String toString()
   public String toString() {
-		for (){
-
+	String vectorString = <
+ 
+		for (int i = 0; i < vector; i++){
+				vectorString = vectorString + this.Vector[i] + " ," + " >"
  }
-	
+	vectorString = vectorString + this.Vector - 1 + " >"
   }
 
 	// public MyVector add(MyVector that)
@@ -101,5 +102,7 @@ public int[] getVector() {
 		System.out.println(v4 + "." + v1 + " = " + v4.dotProduct(v1)); // print -2147483648
 
 	}
+
+}	}
 
 }
