@@ -24,7 +24,40 @@ public class CoinClient {
 
 	// public static Coin[] makeChange(int total) 
 	public static Coin[] makeChange(int total){
-
+	public static Coin[] makeChange(int total) {
+		
+		int numQuarters = total / 25;
+		int remainder = total % 25;
+		
+		int numDimes = remainder / 10;
+		remainder %= 10;
+		
+		int numNickels = remainder / 5;
+		remainder %= 5;
+		
+		int numCents = remainder;
+		
+		
+		int totalCoins = numQuarters + numDimes + numNickels + numCents;
+		Coin[] change = new Coin[totalCoins];
+		
+		int index = 0;
+		
+		for (int i = 0; i < numQuarters; i++) {
+			change[index++] = new Coin(25);
+		}
+		for (int i = 0; i < numDimes; i++) {
+			change[index++] = new Coin(10);
+		}
+		for (int i = 0; i < numNickels; i++) {
+			change[index++] = new Coin(5);
+		}
+		for (int i = 0; i < numCents; i++) {
+			change[index++] = new Coin(1);
+		}
+		
+		return change;
+	}
 }
 	
 	
