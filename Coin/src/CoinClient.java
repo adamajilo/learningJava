@@ -7,12 +7,16 @@ public class CoinClient {
 	///////////////////////////////////////////////////////
 	
 	// public static int totalValue(Coin[] coins) 
-	public static int totalValue(Coin[] coins)
+	public static int totalValue(Coin[] coins){
+
+} 
 	
 	
 
 	// public static Coin[] makeChange(int total) 
-	public static Coin[] makeChange(int total)
+	public static Coin[] makeChange(int total){
+
+}
 	
 	
 	
