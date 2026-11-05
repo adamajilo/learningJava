@@ -1,3 +1,4 @@
+//Bishop-Adam Ajilogba, Abiola Adekola, Chase Griffin
 package coins;
 
 public class CoinClient {
