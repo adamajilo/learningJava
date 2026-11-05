@@ -8,9 +8,17 @@ public class CoinClient {
 	///////////////////////////////////////////////////////
 	
 	// public static int totalValue(Coin[] coins) 
-	public static int totalValue(Coin[] coins){
-
-} 
+		public static int totalValue(Coin[] coins) {
+		int sum = 0;
+		if (coins != null) {
+			for (Coin coin : coins) {
+				if (coin != null) {
+					sum += coin.getValue();
+				}
+			}
+		}
+		return sum;
+	}
 	
 	
 
