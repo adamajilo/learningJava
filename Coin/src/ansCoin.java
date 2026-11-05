@@ -2,6 +2,27 @@
 //Bishop-Adam Ajilogba, Abiola Adekola, Chase Griffin
 package coins;
 
+class Coin {
+	private int value;
+
+	public Coin(int value) {
+		if (value == 1 || value == 5 || value == 10 || value == 25) {
+			this.value = value;
+		} else {
+			this.value = 0;
+		}
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	@Override
+	public String toString() {
+		return "" + value;
+	}
+}
+
 public class CoinClient {
 	
 	///////////////////////////////////////////////////////

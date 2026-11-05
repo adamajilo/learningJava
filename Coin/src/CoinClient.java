@@ -1,14 +1,48 @@
 //Bishop-Adam Ajilogba, Abiola Adekola, Chase Griffin
-package coins;
+package coin;
+
+class Coin {
+
+	private String name;
+	private int value;
+
+	public Coin(int value) {
+		if (value == 1) {
+			this.name = "cent";
+			this.value = 1;
+		} else if (value == 5) {
+			this.name = "nickel";
+			this.value = 5;
+		} else if (value == 10) {
+			this.name = "dime";
+			this.value = 10;
+		} else if (value == 25) {
+			this.name = "quarter";
+			this.value = 25;
+		} else {
+			this.name = "INVALID COIN";
+			this.value = 0;
+		}
+	}
+
+	public int getValue() {
+		return this.value;
+	}
+
+	@Override
+	public String toString() {
+		return "(" + this.name + ")";
+	}
+}
 
 public class CoinClient {
-	
-	///////////////////////////////////////////////////////
-	//        Please implement these two functions       //
-	///////////////////////////////////////////////////////
-	
-	// public static int totalValue(Coin[] coins) 
-		public static int totalValue(Coin[] coins) {
+
+	/////////////////////////////////////////////////////
+	// Please implement these two functions //
+	/////////////////////////////////////////////////////
+
+	// public static int totalValue(Coin[] coins)
+	public static int totalValue(Coin[] coins) {
 		int sum = 0;
 		if (coins != null) {
 			for (Coin coin : coins) {
@@ -19,30 +53,24 @@ public class CoinClient {
 		}
 		return sum;
 	}
-	
-	
 
-	// public static Coin[] makeChange(int total) 
-	public static Coin[] makeChange(int total){
+	// public static Coin[] makeChange(int total)
 	public static Coin[] makeChange(int total) {
-		
 		int numQuarters = total / 25;
 		int remainder = total % 25;
-		
+
 		int numDimes = remainder / 10;
 		remainder %= 10;
-		
+
 		int numNickels = remainder / 5;
 		remainder %= 5;
-		
+
 		int numCents = remainder;
-		
-		
+
 		int totalCoins = numQuarters + numDimes + numNickels + numCents;
 		Coin[] change = new Coin[totalCoins];
-		
+
 		int index = 0;
-		
 		for (int i = 0; i < numQuarters; i++) {
 			change[index++] = new Coin(25);
 		}
@@ -55,36 +83,32 @@ public class CoinClient {
 		for (int i = 0; i < numCents; i++) {
 			change[index++] = new Coin(1);
 		}
-		
+
 		return change;
 	}
-}
-	
-	
-	
 
-	///////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////
 	// Please don't change anything in the main function //
-	///////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////
 
 	public static void main(String[] args) {
-		
-		Coin c1 = new Coin(1);	//
+
+		Coin c1 = new Coin(1); //
 		Coin c2 = new Coin(5);
 		Coin c3 = new Coin(10);
 		Coin c4 = new Coin(25);
-		Coin c5 = new Coin(13);	//invalid coin
-		
+		Coin c5 = new Coin(13); // invalid coin
+
 		System.out.println("Test 1 - totalValue 1");
-		Coin [] coins1 = new Coin[0];
+		Coin[] coins1 = new Coin[0];
 		int s1 = CoinClient.totalValue(coins1);
 		System.out.println("There are no coins, the total value should be 0.");
 		System.out.println("EXPECTED RESULT: 0");
 		System.out.println("YOUR RESULT: " + s1);
 		System.out.println("**************************************************");
-		
+
 		System.out.println("Test 2 - totalValue 2");
-		Coin [] coins2 = {c1, c2, c1, c3, c2, c4, c1, c5};
+		Coin[] coins2 = { c1, c2, c1, c3, c2, c4, c1, c5 };
 		int s2 = CoinClient.totalValue(coins2);
 		System.out.println("There are three cents, two nickels, one dime, one quarter and one valueless coin.");
 		System.out.println("EXPECTED RESULT: 48");
@@ -136,7 +160,7 @@ public class CoinClient {
 		}
 		System.out.println();
 		System.out.println("**************************************************");
-		
+
 		System.out.println("Test 7 - makeChange 4");
 		int total4 = 0;
 		Coin[] change4 = CoinClient.makeChange(total4);
