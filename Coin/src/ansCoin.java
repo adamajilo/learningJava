@@ -1,6 +1,39 @@
-//Answer Key
 //Bishop-Adam Ajilogba, Abiola Adekola, Chase Griffin
-package coins;
+//package coins;
+
+class Coin {
+
+	private String name;
+	private int value;
+
+	public Coin(int value) {
+		if (value == 1) {
+			this.name = "cent";
+			this.value = 1;
+		} else if (value == 5) {
+			this.name = "nickel";
+			this.value = 5;
+		} else if (value == 10) {
+			this.name = "dime";
+			this.value = 10;
+		} else if (value == 25) {
+			this.name = "quarter";
+			this.value = 25;
+		} else {
+			this.name = "INVALID COIN";
+			this.value = 0;
+		}
+	}
+	
+	public int getValue() {
+		return this.value;
+	}
+
+	@Override
+	public String toString() {
+		return "(" + this.name + ")";
+	}
+}
 
 public class CoinClient {
 	
@@ -8,7 +41,8 @@ public class CoinClient {
 	//         Please implement these two functions        //
 	///////////////////////////////////////////////////////
 	
-	public static int totalValue(Coin[] coins) {
+	// public static int totalValue(Coin[] coins) 
+	public static int totalValue(Coin[] coins){
 		int sum = 0;
 		if (coins != null) {
 			for (Coin coin : coins) {
@@ -18,10 +52,10 @@ public class CoinClient {
 			}
 		}
 		return sum;
-	}
+	} 
 	
-	public static Coin[] makeChange(int total) {
-		// Calculate the number of each coin needed using standard greedy approach
+	// public static Coin[] makeChange(int total) 
+	public static Coin[] makeChange(int total){
 		int numQuarters = total / 25;
 		int remainder = total % 25;
 		
@@ -33,12 +67,10 @@ public class CoinClient {
 		
 		int numCents = remainder;
 		
-		// Determine total number of coins for array length
 		int totalCoins = numQuarters + numDimes + numNickels + numCents;
 		Coin[] change = new Coin[totalCoins];
 		
 		int index = 0;
-		// Populate the array with the respective Coin objects
 		for (int i = 0; i < numQuarters; i++) {
 			change[index++] = new Coin(25);
 		}
@@ -55,8 +87,6 @@ public class CoinClient {
 		return change;
 	}
 	
-	
-
 	///////////////////////////////////////////////////////
 	// Please don't change anything in the main function //
 	///////////////////////////////////////////////////////
@@ -146,4 +176,4 @@ public class CoinClient {
 
 	}
 
-}
+}}
