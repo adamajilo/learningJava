@@ -1,4 +1,4 @@
-package coins;
+package Coin.src;
 
 public class Coin {
 
@@ -23,7 +23,7 @@ public class Coin {
 			this.value = 0;
 		}
 	}
-	
+
 	public int getValue() {
 		return this.value;
 	}
